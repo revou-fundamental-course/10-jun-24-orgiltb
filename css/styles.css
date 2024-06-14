@@ -1,1 +1,43 @@
 /* CSS */
+
+.celsius-container {
+  text-align: center;
+}
+
+textarea {
+  resize: none;
+  text-align: center;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+}
+
+.button {
+  height: 32px;
+  border: 0px;
+  border-radius: 4px;
+}
+
+.green {
+  background-color: green;
+  color: white;
+}
+
+.red {
+  background-color: red;
+  color: white;
+}
+
+.blue {
+  background-color: blue;
+  color: white;
+}
+
+.result-container {
+  display: flex;
+  justify-content: space-around;
+}
+.subject-info {
+  font-size: 24px;
+  font-style: italic;
+  font-family: math;
+}
