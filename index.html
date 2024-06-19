@@ -7,14 +7,17 @@
     <link rel="stylesheet" href="css/styles.css" />
   </head>
 
-  <body>
-    <header>
+  <body style="background-color: aliceblue;">
+    <header style="text-align: center">
       <h1>Website Konversi Suhu</h1>
     </header>
 
     <main>
       <!-- Paragraph Info -->
-      <p>Masukkan suhu derajat Celsius (&deg;C)</p>
+      <p style="text-align: center">
+        Masukkan suhu derajat yang ingin diketahui di kotak dibawah, lalu klik
+        tombol konversi untuk mendapatkan hasil konversi
+      </p>
       <!-- Section Celsius -->
       <section class="first-container">
         <section>
@@ -23,7 +26,7 @@
           </header>
 
           <section>
-            <textarea id="firstText" name="first" placeholder="0"></textarea>
+            <textarea id="firstText" name="first" placeholder="0" required></textarea>
           </section>
         </section>
 
@@ -61,14 +64,14 @@
 
           <section>
             <textarea id="convertText" class="convert-container" readonly>
-(&deg;C × 9/5) + 32 = &deg;F
+(0&deg;C × 9/5) + 32 = 32&deg;F
             </textarea>
           </section>
         </section>
       </section>
 
       <!-- Section Info -->
-      <section>
+      <section class="section-info">
         <header>
           <h1>Cara Konversi dari Celsius(&deg;C) ke Fahrenheit(&deg;F)</h1>
         </header>
@@ -79,7 +82,9 @@
           Suhu <span class="subject-info">S</span> dalam derajat
           Fahrenheit(&deg;F) sama dengan suhu
           <span class="subject-info">S</span>
-          dalam derajat Celsius(&deg;C)
+          dalam derajat Celsius(&deg;C) kali
+          <span class="number-info">9/5</span> tambah
+          <span class="number-info">32</span>
         </p>
 
         <p>
@@ -87,6 +92,23 @@
             class="subject-info"
             >S</span
           ><sub>(&deg;C)</sub> x 9/5) + 32
+        </p>
+
+        <!-- Fahrenheit -->
+        <p>
+          Suhu <span class="subject-info">S</span> dalam derajat Celsius(&deg;C)
+          sama dengan suhu
+          <span class="subject-info">S</span>
+          dalam derajat Fahrenheit(&deg;F) kurang
+          <span class="number-info">32</span> lalu dikali
+          <span class="number-info">5/9</span>
+        </p>
+
+        <p>
+          <span class="subject-info">S</span><sub>(&deg;F)</sub> = (<span
+            class="subject-info"
+            >S</span
+          ><sub>(&deg;C)</sub> - 32) x 5/9
         </p>
       </section>
     </main>

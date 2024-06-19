@@ -26,7 +26,8 @@ function doReverse() {
     secondGroup.innerText = "Celsius \xB0C";
     celsiusCheck = false;
     console.log(celsiusCheck);
-    document.getElementById("convertText").value = "(\xB0F - 32) × 5/9 = \xB0C";
+    document.getElementById("convertText").value =
+      "(32\xB0F - 32) × 5/9 = 0\xB0C";
   } else {
     document.getElementById("firstText").placeholder = "0";
     document.getElementById("secondText").placeholder = "32";
@@ -34,7 +35,8 @@ function doReverse() {
     secondGroup.innerText = "Fahrenheit \xB0F";
     celsiusCheck = true;
     console.log(celsiusCheck);
-    document.getElementById("convertText").value = "(\xB0C × 9/5) + 32 = \xB0F";
+    document.getElementById("convertText").value =
+      "(0\xB0C × 9/5) + 32 = 32\xB0F";
   }
   doConvert.x = document.getElementById("firstText").value = "";
   doConvert.y = document.getElementById("secondText").value = "";
@@ -43,4 +45,11 @@ function doReverse() {
 function doReset() {
   doConvert.x = document.getElementById("firstText").value = "";
   doConvert.y = document.getElementById("secondText").value = "";
+  if (celsiusCheck === true) {
+    document.getElementById("convertText").value =
+      "(0\xB0C × 9/5) + 32 = 32\xB0F";
+  } else {
+    document.getElementById("convertText").value =
+      "(32\xB0F - 32) × 5/9 = 0\xB0C";
+  }
 }
