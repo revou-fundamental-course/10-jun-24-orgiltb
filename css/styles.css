@@ -1,7 +1,14 @@
 /* CSS */
 
-.celsius-container {
+.first-container {
   text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.arrow {
+  padding-top: 55px;
+
 }
 
 textarea {
@@ -9,6 +16,21 @@ textarea {
   text-align: center;
   border: 2px solid #ccc;
   border-radius: 4px;
+  font-size: 24px;
+  align-content: space-around;
+}
+
+.result-container {
+  text-align: center;
+}
+
+.convert-container {
+  width: 500px;
+  height: 100px;
+}
+
+.buttonSection {
+  text-align: center;
 }
 
 .button {

@@ -16,33 +16,43 @@
       <!-- Paragraph Info -->
       <p>Masukkan suhu derajat Celsius (&deg;C)</p>
       <!-- Section Celsius -->
-      <section class="celsius-container">
-        <header>
-          <h3>Celsius (&deg;C)</h3>
-        </header>
-
+      <section class="first-container">
         <section>
-          <textarea id="celsiustext" name="celsius" placeholder="0"></textarea>
+          <header>
+            <h3 id="firstGroup">Celsius (&deg;C)</h3>
+          </header>
+
           <section>
-            <button class="button green" onclick="getCelsius()">Konversi</button>
-            <button class="button red">Reset</button>
-            <button class="button blue">Reverse</button>
+            <textarea id="firstText" name="first" placeholder="0"></textarea>
+          </section>
+        </section>
+
+        <p style="font-size: 20px" class="arrow">&rArr;</p>
+
+        <!-- Section Fahrenheit -->
+        <section>
+          <header>
+            <h3 id="secondGroup">Fahrenheit (&deg;F)</h3>
+          </header>
+
+          <section>
+            <textarea
+              id="secondText"
+              name="second"
+              placeholder="32"
+              readonly
+            ></textarea>
           </section>
         </section>
       </section>
 
+      <section class="buttonSection">
+        <button class="button green" onclick="doConvert()">Konversi</button>
+        <button class="button red" onclick="doReset()">Reset</button>
+        <button class="button blue" onclick="doReverse()">Reverse</button>
+      </section>
+
       <section class="result-container">
-        <!-- Section Fahrenheit -->
-        <section>
-          <header>
-            <h3>Fahrenheit (&deg;F)</h3>
-          </header>
-
-          <section>
-            <textarea id="fahrenheitText" name="fahrenheit" placeholder="32"></textarea>
-          </section>
-        </section>
-
         <!-- Section Calculate -->
         <section>
           <header>
@@ -50,7 +60,9 @@
           </header>
 
           <section>
-            <textarea></textarea>
+            <textarea id="convertText" class="convert-container" readonly>
+(&deg;C × 9/5) + 32 = &deg;F
+            </textarea>
           </section>
         </section>
       </section>
